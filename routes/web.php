@@ -17,10 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('drive', function () {
-    return mama();
+    return drive();
 }
    
 );
 function mama(){
-      return 'mama';
+      return 'on Drive';
    }
