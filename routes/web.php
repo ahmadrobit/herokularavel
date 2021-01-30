@@ -21,6 +21,6 @@ Route::get('drive', function () {
 }
    
 );
-function mama(){
+function drive(){
       return 'on Drive';
    }
