@@ -15,15 +15,15 @@ function getClient()
     $client->setApplicationName('Google Sheets API PHP Quickstart');
     $client->setScopes(Google_Service_Sheets::SPREADSHEETS_READONLY);
     $client->setAuthConfig('../spreadsheetcredentials.json');
-    $client->setAccessType('offline');
-    $client->setPrompt('select_account consent');
+    //$client->setAccessType('offline');
+    //$client->setPrompt('select_account consent');
 
     // Load previously authorized token from a file, if it exists.
     // The file token.json stores the user's access and refresh tokens, and is
     // created automatically when the authorization flow completes for the first
     // time.
     $tokenPath = 'token.json';
-    if (file_exists($tokenPath)) {
+    /*if (file_exists($tokenPath)) {
         $accessToken = json_decode(file_get_contents($tokenPath), true);
         $client->setAccessToken($accessToken);
     }
@@ -54,7 +54,7 @@ function getClient()
             mkdir(dirname($tokenPath), 0700, true);
         }
         file_put_contents($tokenPath, json_encode($client->getAccessToken()));
-    }
+    }*/
     return $client;
 }
 
@@ -65,8 +65,8 @@ $service = new Google_Service_Sheets($client);
 
 // Prints the names and majors of students in a sample spreadsheet:
 // https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
-$spreadsheetId = '1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms';
-$range = 'Class Data!A2:E';
+$spreadsheetId = '16vLxG0GpSgGuRpurGvh83xnhvXQVOPo_baVdhEsqjNE';
+$range = 'Data!A2:E';
 $response = $service->spreadsheets_values->get($spreadsheetId, $range);
 $values = $response->getValues();
 
