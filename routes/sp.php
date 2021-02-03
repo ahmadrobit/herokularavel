@@ -1,9 +1,9 @@
 <?php
 require __DIR__ . '../../vendor/autoload.php';
 
-if (php_sapi_name() != 'cli') {
-    throw new Exception('This application must be run on the command line.');
-}
+//if (php_sapi_name() != 'cli') {
+ //   throw new Exception('This application must be run on the command line.');
+//}
 
 /**
  * Returns an authorized API client.
@@ -14,7 +14,7 @@ function getClient()
     $client = new Google_Client();
     $client->setApplicationName('Google Sheets API PHP Quickstart');
     $client->setScopes(Google_Service_Sheets::SPREADSHEETS_READONLY);
-    $client->setAuthConfig('credentials.json');
+    $client->setAuthConfig('../spreadsheetcredentials.json');
     $client->setAccessType('offline');
     $client->setPrompt('select_account consent');
 
