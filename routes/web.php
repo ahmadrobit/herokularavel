@@ -19,8 +19,14 @@ Route::get('/', function () {
 Route::get('drive', function () {
     return drive();
 }
+Route::get('sp', function () {
+    return sp();
+}
    
 );
 function drive(){
+      return 'on Drive';
+   }
+function sp(){
       return 'on Drive';
    }
