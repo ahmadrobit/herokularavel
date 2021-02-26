@@ -1,3 +1,5 @@
 menambahkan tampilan
 	composer require laravel/ui
 https://ilmucoding.com/bootstrap-4-laravel/
+https://github.com/appstract/laravel-bootstrap-components
+	composer require appstract/laravel-bootstrap-components
