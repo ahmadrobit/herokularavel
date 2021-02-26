@@ -16,17 +16,3 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('drive', function () {
-    return drive();
-});
-Route::get('sp', function () {
-    return sp();
-});
-
-   
-function drive(){
-      return 'on Drive';
-   }
-function sp(){
-      require 'sp.php';
-   }
